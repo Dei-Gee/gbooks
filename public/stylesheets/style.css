@@ -1,8 +1,112 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  padding: 50px;
+  padding: 1vw;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: black;
 }
 
 a {
   color: #00B7FF;
+}
+
+.main {
+  display: flex;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  flex-direction: column;
+  background-color: aliceblue;
+  padding-top: .25rem;
+  padding-bottom: .25rem;
+  width: 100%;
+}
+
+.logo {
+  width: 35%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.main > h1 {
+  font-size: 3.5rem;
+  text-align: center;
+}
+
+.blurb {
+  text-align: center;
+  margin: 0 auto;
+  font-size: .9rem;
+}
+
+.searchform {
+  display: flex;
+  margin: 2.5rem auto;
+  flex-direction: column;
+}
+
+.searchform > input[type="text"] {
+  padding: 5px;
+  border: none;
+  border-bottom: solid 2px gray;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  background-color: transparent;
+  transition: 300ms;
+  font-size: 1rem;
+}
+
+.searchform > input[type="text"]:active, 
+.searchform > input[type="text"]:focus {
+  transition: 300ms;
+  border: none;
+  border-bottom: solid 2px orange;
+  outline: none;
+}
+
+.searchform > input[type="submit"] {
+  padding: .75rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin: 0 auto;
+  cursor: pointer;
+  font-size: 1rem;
+  border: solid 2px #233746;
+  background-color: transparent;
+  outline: none;
+  color: black;
+  transition: 300ms;
+}
+
+.searchform > input[type="submit"]:hover {
+  background-color: #233746;
+  color: white;
+  transition: 300ms;
+}
+
+@media only screen and (min-width: 768px) {
+  .main {
+    max-width: 75%;
+  }
+
+  .main > h1 {
+    font-size: 4.5rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .main {
+    max-width: 50%;
+  }
+
+  .main > h1 {
+    font-size: 4.5rem;
+  }
 }
