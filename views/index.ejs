@@ -13,10 +13,15 @@
       <h1>GBooks</h1>
       <span class="blurb">Powered by Google Books API</span>
 
-      <form class="searchform" method="" action="">
-        <input type="text" placeholder="Search books..." />
+      <form class="searchform" method="GET" action="/books/searchbooks">
+        <input type="text" name="query" placeholder="Keyword..." />
+        <input type="text" name="author" placeholder="Author..." />
         <input type="submit" />
       </form>
+      <%
+        console.log(books)
+      %>
     </div>
+    
   </body>
 </html>
